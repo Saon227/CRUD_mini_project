@@ -2,7 +2,7 @@
 
 #define _MANAGER_H_
 #include <stdio.h>
-#include "product.h"
+#include "crud.h"
 
 void listClass(Class *c, int count);
 int selectDataNo(Class *c, int count);
