@@ -18,8 +18,18 @@ void readClass(Class c){
 }
 
 int updateClass(Class *c){
-
+    printf("수업의 이름은? ");
+    scanf("%s",c->name);
+    printf("교수님 섬함은? ");
+    scanf("%s", c->profname);
+    printf("학점은? ");
+    scanf("%f", &c->credit);
+    printf("교시는? ");
+    scanf("%d", &c->period);
+    printf("=> 수정됨!\n");
+    return 1;
 }
+
 int deleteClass(Class *c){
 
 }
