@@ -13,8 +13,10 @@ int addClass(Class *c){
 }
 
 void readClass(Class c){
-
+    printf("%8s %8s %.1f %4d\n",
+    c.name, c.profname, c.credit, c.period);
 }
+
 int updateClass(Class *c){
 
 }
