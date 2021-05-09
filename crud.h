@@ -4,7 +4,7 @@
 #include <stdio.h>
 
 typedef struct {   
-    char name[20]; // 수업명    
+    char name[50]; // 수업명    
     char profname[20]; // 교수님 성함   
     float credit; // 학점   
     int period; // 교시   
