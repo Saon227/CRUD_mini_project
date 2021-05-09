@@ -31,8 +31,8 @@ int updateClass(Class *c){
 }
 
 int deleteClass(Class *c){
-    c->name = NULL;
-    c->profname = NULL;
+    c->name = 'NULL';
+    c->profname = 'NULL';
     c->credit = -1;
     c->period = -1;
     return 1;
