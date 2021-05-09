@@ -1,5 +1,9 @@
 //main.c
 //
+
+#include "crud.h"
+#include "manager.h"
+#include "data.h"
 #include <stdio.h>
 
 int Menu(){
