@@ -2,7 +2,7 @@
 #include "manager.h"
 
 void listClass(Class *c, int count){
-    printf("Name Professor Credit Period\n================================\n");
+    printf("No Name     Professor Credit Period\n================================\n");
     for(int i=0; i<count; i++){
         if(c[i].credit == -1) continue;
 	printf("%2d ", i+1);
