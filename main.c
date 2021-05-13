@@ -67,7 +67,7 @@ int main(){
 	else if (menu == 5){
             saveData(clist, index);
         }
-        else if(menu==6){
+        /*else if(menu==6){
             int type;
             printf("어느 타입으로 검색하시겠습니까?(1: 수업명, 2: 교수명, 3: 학점) ");
             scanf("%d", &type);
@@ -75,7 +75,7 @@ int main(){
             else if(type==2) searchProf(clist, index);
             else if(type==3) searchCredit(clist, index);
             else printf("잘못 입력하셨습니다.\n");
-        }
+        }*/
     }
     printf("종료됨!\n");
 
