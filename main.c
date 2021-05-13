@@ -22,10 +22,9 @@ int Menu(){
 }
 
 int main(){
-    int count = 0;
-    int result = 0;
     Class clist[20];
-    int index =0;
+    int count = loadData(clist);
+    int index = count;
     int menu;
 
     while(1){
