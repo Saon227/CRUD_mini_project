@@ -12,5 +12,22 @@ void saveData(Class *c, int count){
     printf("=> 저장됨!\n");
 }
 int loadData(Class *c){
-
+    FILE *fp;
+    if(fp = fopen("data.txt", "rt")){
+        int i;
+        for(i=0; i<100; i++){
+            fscanf(fp, "%s", c[i].name);
+            if(feof(fp)) break;
+            fscanf(fp, "%s", c[i].profname);
+            fscanf(fp, "%f", &c[i].credit);
+            fscanf(fp, "%d", &c[i].period);
+        }
+        printf("=> 로딩 성공!\n");
+        fclose(fp);
+        return i;
+    }
+    else{
+        printf("=> 파일 없음\n");
+        return 0;
+    }
 }
