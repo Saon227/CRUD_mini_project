@@ -6,7 +6,7 @@ int addClass(Class *c){
     scanf("%[^\n]s",c->name);
     printf("교수님 성함은? ");
     getchar();
-    scanf("%[^\n]s", c->profname);
+    scanf("%s", c->profname);
     printf("학점은? ");
     scanf("%f", &c->credit);
     printf("교시는? ");
@@ -26,7 +26,7 @@ int updateClass(Class *c){
     scanf("%[^\n]s",c->name);
     printf("교수님 섬함은? ");
     getchar();
-    scanf("%[^\n]s", c->profname);
+    scanf("%s", c->profname);
     printf("학점은? ");
     scanf("%f", &c->credit);
     printf("교시는? ");
