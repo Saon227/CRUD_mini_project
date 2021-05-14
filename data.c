@@ -6,7 +6,7 @@ void saveData(Class *c, int count){
     fp = fopen("data.txt", "wt");
     for(int i=0; i<count; i++){
         if(c[i].credit == -1) continue;
-        fprintf(fp, "%s\n%s\n%.1f %d\n", c[i].name, c[i].profname, c[i].credit, c[i].period);
+        fprintf(fp, "%s %.1f %d %s\n", c[i].profname, c[i].credit, c[i].period, c[i].name);
     }
     fclose(fp);
     printf("=> 저장됨!\n");
@@ -16,13 +16,11 @@ int loadData(Class *c){
     if(fp = fopen("data.txt", "rt")){
         int i;
         for(i=0; i<100; i++){
-            fscanf(fp, "%[^\n]s", c[i].name);
-	    getchar();
+            fscanf(fp, "%s", c[i].profname);
             if(feof(fp)) break;
-            fscanf(fp, "%[^\n]s", c[i].profname);
-            getchar();
 	    fscanf(fp, "%f", &c[i].credit);
             fscanf(fp, "%d", &c[i].period);
+            fscanf(fp, "%[^\n]s", c[i].name);
         }
         printf("=> 로딩 성공!\n");
         fclose(fp);
