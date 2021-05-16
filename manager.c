@@ -1,5 +1,6 @@
 #include "crud.h"
 #include "manager.h"
+#include <string.h>
 
 void listClass(Class *c, int count){
     printf("No ClassName          Professor   Credit Period\n============================================\n");
@@ -58,7 +59,7 @@ void searchCredit(Class *c, int count){
     int scnt = 0;
     float credit;
     printf("검색할 학점은? ");
-    scanf("%s", search);
+    scanf("%f", &credit);
     printf("No ClassName          Professor   Credit Period\n============================================\n");
     for(int i =0; i <count ; i++){
         if(c[i].credit == 0)
