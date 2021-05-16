@@ -54,3 +54,20 @@ void searchProf(Class *c, int count){
     }
 }
 
+void searchCredit(Class *c, int count){
+    int scnt = 0;
+    float credit;
+    printf("검색할 학점은? ");
+    scanf("%s", search);
+    printf("No ClassName          Professor   Credit Period\n============================================\n");
+    for(int i =0; i <count ; i++){
+        if(c[i].credit == 0)
+                continue;
+        if(c[i].credit==credit){
+            printf("%2d ", i+1);
+            readClass(c[i]);
+            scnt++;
+        }
+    }
+}
+
